@@ -1,9 +1,8 @@
 ﻿using Raven.Client.Documents.Indexes;
-using Wolverine.Raven.Internals;
 
-namespace Wolverine.Raven.Persistence;
+namespace Wolverine.RavenDb.Internals;
 
-public partial class RavenMessageStore
+public partial class RavenDbMessageStore
 {
     public async Task<IReadOnlyList<Envelope>> LoadOutgoingAsync(Uri destination)
     {

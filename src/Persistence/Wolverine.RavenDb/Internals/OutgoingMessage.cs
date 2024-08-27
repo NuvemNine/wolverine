@@ -1,6 +1,6 @@
 ﻿using Wolverine.Runtime.Serialization;
 
-namespace Wolverine.Raven.Internals;
+namespace Wolverine.RavenDb.Internals;
 
 public class OutgoingMessage
 {

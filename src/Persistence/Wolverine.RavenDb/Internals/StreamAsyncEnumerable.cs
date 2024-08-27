@@ -1,6 +1,6 @@
 ﻿using Raven.Client.Documents.Commands;
 
-namespace Wolverine.Raven.Persistence;
+namespace Wolverine.RavenDb.Internals;
 
 public class StreamAsyncEnumerable<T> : IAsyncEnumerable<StreamResult<T>>
 {

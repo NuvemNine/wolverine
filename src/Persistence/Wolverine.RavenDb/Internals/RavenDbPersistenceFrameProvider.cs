@@ -1,19 +1,17 @@
 ﻿using JasperFx.CodeGeneration.Frames;
 using JasperFx.CodeGeneration.Model;
-using Lamar;
 using Raven.Client.Documents.Session;
 using Wolverine.Configuration;
 using Wolverine.Persistence;
 using Wolverine.Persistence.Sagas;
-using Wolverine.Raven.Sagas;
 using Wolverine.Runtime;
 using MethodCall = JasperFx.CodeGeneration.Frames.MethodCall;
 
 
-namespace Wolverine.Raven.Codegen;
+namespace Wolverine.RavenDb.Internals;
 
 // ReSharper disable once InconsistentNaming
-internal class RavenPersistenceFrameProvider : IPersistenceFrameProvider
+internal class RavenDbPersistenceFrameProvider : IPersistenceFrameProvider
 {
     public bool CanPersist(Type entityType, IContainer container, out Type persistenceService)
     {

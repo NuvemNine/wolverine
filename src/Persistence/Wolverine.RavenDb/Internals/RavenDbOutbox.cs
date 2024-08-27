@@ -1,11 +1,11 @@
 ﻿using Raven.Client.Documents.Session;
 using Wolverine.Runtime;
 
-namespace Wolverine.Raven;
+namespace Wolverine.RavenDb;
 
-public class RavenOutbox : MessageContext, IRavenOutbox
+public class RavenDbOutbox : MessageContext, IRavenDbOutbox
 {
-    public RavenOutbox(IWolverineRuntime runtime, IAsyncDocumentSession session) : base(runtime)
+    public RavenDbOutbox(IWolverineRuntime runtime, IAsyncDocumentSession session) : base(runtime)
     {
         Session = session;
     }

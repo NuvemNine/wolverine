@@ -3,7 +3,7 @@ using JasperFx.CodeGeneration.Frames;
 using JasperFx.CodeGeneration.Model;
 using Raven.Client.Documents.Session;
 
-namespace Wolverine.Raven.Sagas;
+namespace Wolverine.RavenDb.Internals;
 
 internal class DocumentSessionOperationFrame : SyncFrame
 {

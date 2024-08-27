@@ -4,7 +4,7 @@ using JasperFx.CodeGeneration.Model;
 using JasperFx.Core.Reflection;
 using Raven.Client.Documents.Session;
 
-namespace Wolverine.Raven.Sagas;
+namespace Wolverine.RavenDb.Internals;
 
 internal class LoadDocumentFrame : AsyncFrame
 {

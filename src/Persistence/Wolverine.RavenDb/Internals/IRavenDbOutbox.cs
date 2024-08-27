@@ -1,11 +1,11 @@
 ﻿using Raven.Client.Documents.Session;
 
-namespace Wolverine.Raven;
+namespace Wolverine.RavenDb;
 
 /// <summary>
 ///     Wrapped messaging outbox for raven
 /// </summary>
-public interface IRavenOutbox : IMessageBus
+public interface IRavenDbOutbox : IMessageBus
 {
     /// <summary>
     ///     The current raven session for this outbox

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Wolverine.Raven.Internals;
+namespace Wolverine.RavenDb.Internals;
 
 /// <summary>
 /// Getting to internal properties via reflection until we can determine that we don't need them

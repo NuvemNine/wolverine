@@ -3,9 +3,8 @@ using JasperFx.CodeGeneration.Frames;
 using JasperFx.CodeGeneration.Model;
 using Raven.Client.Documents.Session;
 using Wolverine.Configuration;
-using Wolverine.Raven.Publishing;
 
-namespace Wolverine.Raven.Codegen;
+namespace Wolverine.RavenDb.Internals;
 
 internal class TransactionalFrame : Frame
 {

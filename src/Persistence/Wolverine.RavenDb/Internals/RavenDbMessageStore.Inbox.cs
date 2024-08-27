@@ -1,11 +1,10 @@
 ﻿using Raven.Client.Documents.Commands.Batches;
 using Raven.Client.Documents.Operations;
-using Wolverine.Raven.Internals;
 using Wolverine.Transports;
 
-namespace Wolverine.Raven.Persistence;
+namespace Wolverine.RavenDb.Internals;
 
-public partial class RavenMessageStore
+public partial class RavenDbMessageStore
 {
     public async Task ScheduleExecutionAsync(Envelope envelope)
     {

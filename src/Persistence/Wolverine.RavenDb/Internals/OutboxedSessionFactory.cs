@@ -1,9 +1,8 @@
 ﻿using Raven.Client.Documents;
 using Raven.Client.Documents.Session;
-using Wolverine.Raven.Internals;
 using Wolverine.Runtime;
 
-namespace Wolverine.Raven.Publishing;
+namespace Wolverine.RavenDb.Internals;
 
 public class OutboxedSessionFactory
 {
@@ -27,7 +26,7 @@ public class OutboxedSessionFactory
     
     private void ConfigureSession(MessageContext context, IAsyncDocumentSession session)
     {
-        context.EnlistInOutbox(new RavenEnvelopeTransaction(session));
+        context.EnlistInOutbox(new RavenDbEnvelopeTransaction(session));
         
         session.Advanced.OnAfterSaveChanges += (_, _) => 
             context.FlushOutgoingMessagesAsync().GetAwaiter().GetResult();

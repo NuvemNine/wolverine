@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Wolverine.Persistence.Sagas;
-using Wolverine.Raven.Codegen;
 
-namespace Wolverine.Raven.Internals;
+namespace Wolverine.RavenDb.Internals;
 
 /// <summary>
 ///     Add to your Wolverine application to opt into EF Core-backed
@@ -10,12 +9,12 @@ namespace Wolverine.Raven.Internals;
 ///     Warning! This has to be used in conjunction with a Wolverine
 ///     database package
 /// </summary>
-internal class RavenBackedPersistence : IWolverineExtension
+internal class RavenDbBackedPersistence : IWolverineExtension
 {
     public void Configure(WolverineOptions options)
     {
-        options.CodeGeneration.AddPersistenceStrategy<RavenPersistenceFrameProvider>();
+        options.CodeGeneration.AddPersistenceStrategy<RavenDbPersistenceFrameProvider>();
 
-        options.Services.AddScoped(typeof(IRavenOutbox), typeof(RavenOutbox));
+        options.Services.AddScoped(typeof(IRavenDbOutbox), typeof(RavenDbOutbox));
     }
 }

@@ -1,17 +1,16 @@
 ﻿using Raven.Client.Documents;
 using Wolverine.Persistence.Durability;
-using Wolverine.Raven.Internals;
 using Wolverine.Runtime;
 using Wolverine.Runtime.Agents;
 
-namespace Wolverine.Raven.Persistence;
+namespace Wolverine.RavenDb.Internals;
 
-public partial class RavenMessageStore : IMessageStore, IMessageInbox, IMessageOutbox
+public partial class RavenDbMessageStore : IMessageStore, IMessageInbox, IMessageOutbox
 {
     private readonly IDocumentStore store;
     private readonly DurabilitySettings durabilitySettings;
 
-    public RavenMessageStore(IDocumentStore store, DurabilitySettings durabilitySettings)
+    public RavenDbMessageStore(IDocumentStore store, DurabilitySettings durabilitySettings)
     {
         this.store = store;
         this.durabilitySettings = durabilitySettings;

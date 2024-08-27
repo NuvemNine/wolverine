@@ -1,11 +1,11 @@
 ﻿using Raven.Client.Documents.Session;
 using Wolverine.Persistence.Durability;
 
-namespace Wolverine.Raven.Internals;
+namespace Wolverine.RavenDb.Internals;
 
-internal class RavenEnvelopeTransaction : IEnvelopeTransaction
+internal class RavenDbEnvelopeTransaction : IEnvelopeTransaction
 {
-    public RavenEnvelopeTransaction(IAsyncDocumentSession session)
+    public RavenDbEnvelopeTransaction(IAsyncDocumentSession session)
     {
         Session = session;
     }
